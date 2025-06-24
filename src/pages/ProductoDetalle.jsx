@@ -18,7 +18,7 @@ function ProductoDetalle() {
   return (
     <section className="product-detail">
       <h1>{producto.title}</h1>
-      <img src={producto.thumbnail} alt={producto.title} />
+      <img src={producto.thumbnail} alt={producto.title} loading="lazy" />
       <p>{producto.description}</p>
       <p>Precio: ${producto.price}</p>
     </section>
