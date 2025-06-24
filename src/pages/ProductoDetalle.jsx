@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import './ProductoDetalle.css'
 
 function ProductoDetalle() {
   const { idProducto } = useParams()
@@ -15,7 +16,7 @@ function ProductoDetalle() {
   if (!producto) return <p>Cargando...</p>
 
   return (
-    <section>
+    <section className="product-detail">
       <h1>{producto.title}</h1>
       <img src={producto.thumbnail} alt={producto.title} />
       <p>{producto.description}</p>
