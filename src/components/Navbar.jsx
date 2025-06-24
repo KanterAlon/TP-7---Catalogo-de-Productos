@@ -8,7 +8,6 @@ function Navbar() {
     fetch('https://dummyjson.com/products/categories')
       .then(res => res.json())
       .then(data => {
-        // Si tu API devuelve { categories: [...] }, haz setCategories(data.categories)
         setCategories(data)
       })
       .catch(err => {

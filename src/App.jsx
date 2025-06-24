@@ -9,7 +9,7 @@ import Contacto from './pages/Contacto'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}> 
+      <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="quienes-somos" element={<QuienesSomos />} />
         <Route path="productos" element={<Productos />} />
