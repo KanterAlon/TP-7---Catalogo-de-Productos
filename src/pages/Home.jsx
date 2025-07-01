@@ -2,10 +2,22 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 
 const slides = [
-  { img: 'src/assets/innovation.png', caption: 'Innovación sin límites' },
-  { img: 'src/assets/design.png', caption: 'Diseño vanguardista' },
-  { img: 'src/assets/performance.png', caption: 'Rendimiento superior' }
-];
+  {
+    img:
+      'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    caption: 'Innovación sin límites'
+  },
+  {
+    img:
+      'https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    caption: 'Diseño vanguardista'
+  },
+  {
+    img:
+      'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    caption: 'Rendimiento superior'
+  }
+]
 
 const Home = () => {
   const [current, setCurrent] = useState(0);

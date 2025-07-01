@@ -54,12 +54,15 @@ h1 {
   font-weight: 600;
   margin-bottom: 1rem;
 }
-
 header {
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(10, 10, 15, 0.8);
+  background: linear-gradient(
+      135deg,
+      rgba(10, 10, 15, 0.85),
+      rgba(10, 10, 20, 0.6)
+    );
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 0.5rem 1rem;
@@ -112,7 +115,7 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(10, 10, 15, 0.9);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   list-style: none;
   padding: 0.75rem 0;
@@ -145,6 +148,9 @@ header {
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card-producto:hover {
@@ -159,6 +165,30 @@ header {
   margin-bottom: 1rem;
 }
 
+.card-producto h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.card-producto .price {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.btn-card {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: var(--color-light);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-card:hover {
+  background: var(--color-accent);
+  transform: translateY(-2px);
+}
+
 footer {
   background: rgba(10, 10, 15, 0.8);
   backdrop-filter: blur(10px);
@@ -170,6 +200,10 @@ footer {
 @media (prefers-color-scheme: light) {
   header {
     background: rgba(255, 255, 255, 0.8);
+  }
+
+  .dropdown {
+    background-color: rgba(255, 255, 255, 0.9);
   }
 
   footer {

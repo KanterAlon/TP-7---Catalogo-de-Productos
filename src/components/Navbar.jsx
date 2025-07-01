@@ -8,7 +8,11 @@ function Navbar() {
     fetch('https://dummyjson.com/products/categories')
       .then(res => res.json())
       .then(data => {
-        setCategories(data)
+        const mapped = data.map(slug => ({
+          slug,
+          name: slug.replace(/-/g, ' ')
+        }))
+        setCategories(mapped)
       })
       .catch(err => {
         console.error(err)
