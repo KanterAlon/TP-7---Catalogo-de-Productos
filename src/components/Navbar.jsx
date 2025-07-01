@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
 function Navbar() {
   const [categories, setCategories] = useState([])
 
