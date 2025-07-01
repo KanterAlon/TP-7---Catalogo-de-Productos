@@ -1,18 +1,12 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { fetchCategories } from '../utils/api'
 function Navbar() {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    fetch('https://dummyjson.com/products/categories')
-      .then(res => res.json())
-      .then(data => {
-        const mapped = data.map(slug => ({
-          slug,
-          name: slug.replace(/-/g, ' ')
-        }))
-        setCategories(mapped)
-      })
+    fetchCategories()
+      .then(setCategories)
       .catch(err => {
         console.error(err)
         setCategories([])
