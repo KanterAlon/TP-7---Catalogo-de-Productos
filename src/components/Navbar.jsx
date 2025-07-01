@@ -1,12 +1,15 @@
-import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { fetchCategories } from '../utils/api'
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    fetchCategories()
-      .then(setCategories)
+    fetch('https://dummyjson.com/products/categories')
+      .then(res => res.json())
+      .then(data => {
+        setCategories(data)
+      })
       .catch(err => {
         console.error(err)
         setCategories([])
@@ -19,7 +22,6 @@ function Navbar() {
         <ul className="nav-list">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/quienes-somos">Quiénes Somos</Link></li>
-          <li><Link to="/categorias">Categorías</Link></li>
           <li>
             Productos
             <ul className="dropdown">
