@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CardProducto from '../components/CardProducto'
 import CardCategoria from '../components/CardCategoria'
+import { fetchCategories } from '../utils/api'
 
 function Productos() {
   const { categoria } = useParams()
@@ -15,15 +16,8 @@ function Productos() {
         .then(data => setProductos(data.products || []))
         .catch(() => setProductos([]))
     } else {
-      fetch('https://dummyjson.com/products/categories')
-        .then(res => res.json())
-        .then(data => {
-          const mapped = data.map(slug => ({
-            slug,
-            name: slug.replace(/-/g, ' ')
-          }))
-          setCategorias(mapped)
-        })
+      fetchCategories()
+        .then(setCategorias)
         .catch(() => setCategorias([]))
     }
   }, [categoria])
