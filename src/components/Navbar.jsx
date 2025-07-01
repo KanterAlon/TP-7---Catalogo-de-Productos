@@ -26,6 +26,7 @@ function Navbar() {
         <ul className="nav-list">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/quienes-somos">Quiénes Somos</Link></li>
+          <li><Link to="/categorias">Categorías</Link></li>
           <li>
             Productos
             <ul className="dropdown">

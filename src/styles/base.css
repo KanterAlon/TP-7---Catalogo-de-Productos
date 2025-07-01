@@ -175,6 +175,25 @@ header {
   font-weight: 600;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+  color: var(--color-light);
+  box-shadow: 0 8px 20px rgba(0, 208, 132, 0.5);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
 .btn-card {
   margin-top: auto;
   padding: 0.5rem 1rem;
