@@ -83,7 +83,7 @@
   transform: translateY(1px);
 }
 
-/* Responsive */
+
 @media (max-width: 480px) {
   .contact-page {
     padding: 1rem;

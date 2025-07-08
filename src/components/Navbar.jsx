@@ -25,11 +25,11 @@ function Navbar() {
           <li>
             Productos
             <ul className="dropdown">
-              {/* Enlace “Ver todos” con clave fija */}
+              {}
               <li key="all">
                 <Link to="/productos">Ver todos</Link>
               </li>
-              {/* Map sobre objetos: key única y renderizado de name */}
+              {}
               {categories.map(cat => (
                 <li key={cat.slug}>
                   <Link to={`/productos/${cat.slug}`}>

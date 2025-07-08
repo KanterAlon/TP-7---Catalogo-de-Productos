@@ -63,7 +63,7 @@
   color: var(--text-secondary);
 }
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 480px) {
   .about-page {
     padding: 1rem;
