@@ -44,14 +44,14 @@ const testimonials = [
     name: 'Ana Gómez'
   },
   {
-    img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200',
+    img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?',
     quote: 'Los envíos llegaron a tiempo y en perfecto estado.',
     name: 'Luis Rodríguez'
   },
   {
-    img: 'https://images.pexels.com/photos/712512/pexels-photo-712512.jpeg?auto=compress&cs=tinysrgb&w=200',
+    img: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=200',
     quote: 'Gran variedad de productos y diseño innovador.',
-    name: 'María Pérez'
+    name: 'Franklin Klinton'
   }
 ]
 

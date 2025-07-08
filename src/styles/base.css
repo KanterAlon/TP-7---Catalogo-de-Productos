@@ -121,6 +121,8 @@ header {
   padding: 0.75rem 0;
   margin: 0;
   min-width: 170px;
+  max-height: 70vh;
+  overflow-y: auto;
   z-index: 10;
   border-radius: 8px;
 }
@@ -146,58 +148,9 @@ header {
   padding: 1.5rem;
   text-align: center;
   backdrop-filter: blur(5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition), box-shadow var(--transition);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
-.card-producto:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-}
-
-.card-producto img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.card-producto h3 {
-  margin: 0.5rem 0;
-  font-size: 1.25rem;
-}
-
-.card-producto .price {
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: background var(--transition), transform var(--transition);
-}
-
-.btn-primary {
-  background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
-  color: var(--color-light);
-  box-shadow: 0 8px 20px rgba(0, 208, 132, 0.5);
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px) scale(1.05);
-}
-
-.btn-card {
-  margin-top: auto;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  header {
   background: var(--color-primary);
   color: var(--color-light);
   transition: background var(--transition), transform var(--transition);
@@ -223,6 +176,8 @@ footer {
 
   .dropdown {
     background-color: rgba(255, 255, 255, 0.9);
+    max-height: 70vh;
+    overflow-y: auto;
   }
 
   footer {
