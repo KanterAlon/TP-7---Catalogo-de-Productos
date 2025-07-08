@@ -1,0 +1,35 @@
+@import '../styles/variables.css';
+
+.contact-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-page p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
