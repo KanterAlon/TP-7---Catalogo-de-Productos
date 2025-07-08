@@ -1,0 +1,25 @@
+@import '../styles/variables.css';
+
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-page p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.team-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
